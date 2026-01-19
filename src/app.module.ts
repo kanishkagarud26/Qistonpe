@@ -17,6 +17,7 @@ import { AnalyticsModule } from './analytics/analytics.module';
     ConfigModule.forRoot({ isGlobal: true }),
 
     // Configure TypeORM using environment variables
+    ConfigModule.forRoot({ isGlobal: true }), // ✅ add this
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: process.env.DB_HOST,
